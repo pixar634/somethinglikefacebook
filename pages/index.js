@@ -3,20 +3,20 @@ import Header from "../components/Header"
 
 export default function Home() {
   return (
-  <div> 
-  <Head>
-    <title>Facebook</title>
-  </Head>
+    <div>
+      <Head>
+        <title>Facebook</title>
+      </Head>
 
-  {/* Header */}
-  <Header />
+      {/* Header */}
+      <Header />
 
-  <main>
-    {/* sidebaE */}
-    {/* MAIN */}
-    {/* rightside chat */}
-  </main>
+      <main>
+        {/* sidebar */}
+        {/* Feed */}
+        {/* rightside chat */}
+      </main>
 
-  </div>
+    </div>
   )
 }

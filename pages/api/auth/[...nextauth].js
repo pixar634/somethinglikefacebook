@@ -2,6 +2,7 @@ import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
 export default NextAuth({
+  //  Add as many configs/platforms required for auth like google, github , fb etc
   // Configure one or more authentication providers
   providers: [
     Providers.Facebook({
