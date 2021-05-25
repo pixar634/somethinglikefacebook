@@ -20,3 +20,15 @@ export default function Home() {
     </div>
   )
 }
+
+// we build a function to handle the user data who has logged in or out.
+
+export async function getServerSideProps(context) {
+  //get the user
+  const session = await getSession(context)
+  return {
+    props: {
+      session
+    }
+  }
+}
