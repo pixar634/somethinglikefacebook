@@ -27,6 +27,7 @@ export async function getServerSideProps(context) {
   //get the user
   const session = await getSession(context)
   return {
+    // this prop is returning an object to the home function which we can pass to retreive user info
     props: {
       session
     }
