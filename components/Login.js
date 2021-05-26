@@ -11,7 +11,7 @@ function Login() {
                 objectFit="contain"
             />
             <h1
-                className="p-5 bg-blue-500 shadow-md hover:bg-blue-600 hover:shadow-2xl rounded-full text-white text-center w-1/6 cursor-pointer active:border-b-2"
+                className="p-5 shadow-md  rounded-full text-white text-center w-1/6 cursor-pointer active:border-b-2 bg-gradient-to-r from-green-400 to-blue-500 hover:bg-blue-600 hover:shadow-2xl"
                 onClick={signIn}
             >
                 Login with Facebook

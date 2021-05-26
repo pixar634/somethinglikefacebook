@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 function SidebarRow({ src, Icon, title }) {
     return (
-        <div className="flex items-center space-x-2 p-4 cursor-pointer">
+        <div className="flex items-center space-x-2 p-4 hover:bg-gray-100 rounded-xl cursor-pointer">
             {src && (
                 <Image
                     className="rounded-full"

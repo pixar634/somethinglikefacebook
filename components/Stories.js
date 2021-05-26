@@ -32,6 +32,7 @@ const stories = [
 function Stories() {
     return (
         <div className="flex justify-centre space-x-3 mx-auto">
+            {/* <h1>testing</h1> */}
             {stories.map((story) => (
                 <StoryCard
                     name={story.name} src={story.src} profile={story.profile}

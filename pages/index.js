@@ -17,7 +17,7 @@ export default function Home({ session }) {
       {/* Header */}
       <Header />
 
-      <main>
+      <main className="flex">
         {/* sidebar */}
         <Sidebar />
         {/* Feed */}
