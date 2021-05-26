@@ -1,7 +1,13 @@
 import Head from 'next/head'
+import { getSession } from "next-auth/client"
 import Header from "../components/Header"
+import Login from '../components/Login'
+import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
+//pass session here to see if the user is logegd in/if not, then render login component.
+export default function Home({ session }) {
+  if (!session) return <Login />
 
-export default function Home() {
   return (
     <div>
       <Head>
@@ -13,7 +19,9 @@ export default function Home() {
 
       <main>
         {/* sidebar */}
+        <Sidebar />
         {/* Feed */}
+        <Feed />
         {/* rightside chat */}
       </main>
 
