@@ -9,4 +9,7 @@
   .inputIcon{
     @apply flex items-center space-x-1 hover:bg-gray-600 hover:rounded-xl flex-grow justify-center p-2 rounded-xl cursor-pointer;
   }
+  .image{
+    @apply h-10 bg-blend-overlay
+  }
 }

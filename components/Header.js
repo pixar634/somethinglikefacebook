@@ -17,23 +17,26 @@ import {
 } from "@heroicons/react/outline"
 import HeaderIcon from './HeaderIcon'
 import { signOut, useSession } from "next-auth/client"
-
+import Logo from "../assets/logo30.png"
 function Header() {
     const [session] = useSession();
     return (
         <div className="sticky font-barlow top-0 z-50 bg-gray-800 flex items-center p-2 lg:px-5  text-white ">
             {/* left */}
-            <div className="flex items-center">
-                <Image
-                    src="https://links.papareact.com/5me"
+            <div className="flex items-center ">
+                {/* <Image className="bg-blend-darken h-20"
+                    src="../assets/logo1.png"
                     width="40"
                     height="40"
                     layout="fixed"
-                />
+                /> */}
+                <img src={Logo} className="h-10  transition duration-500 transform-gpu ease-in lg:rotate-180 md:rotate-90 " />
+
+
                 <div className="hidden md:inline-flex ml-2 items-center rounded-full bg-gray-600 p-2 hover:b-2 hover:border-blue-400" >
                     <SearchIcon className="h-6 text-gray-300" />
                     <input
-                        className="hidden lg:inline-flex ml-2 bg-transparent outline-none placeholder-gray-300 flex-shrink "
+                        className="hidden lg:inline-flex ml-2 bg-transparent   outline-none placeholder-gray-300 flex-shrink"
                         placeholder="Search Facebook"
                     />
                 </div>

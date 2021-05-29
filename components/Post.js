@@ -1,14 +1,14 @@
 import React from 'react'
 import { ChatAltIcon, ShareIcon, ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import Logo from "../assets/loader/loader1.svg"
+import Logo from '../assets/loader1.svg';
 function Post({ name, message, email, postImage, image, timestamp }) {
     return (
         <div className="flex flex-col">
             <div className="p-5 bg-gray-700 text-white mt-5 rounded-t-2xl shadow-sm">
                 {!image && (
                     <div className="flex justify-center">
-                        <Logo className="animate-spin m-5 h-10" />
+                        <img src={Logo} className="h-10" />
 
                     </div>
                 )}

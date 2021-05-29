@@ -11,8 +11,12 @@ module.exports = {
   },
   variants: {
     extend: {},
+    mixBlendMode: ['responsive'],
+    backgroundBlendMode: ['responsive'],
+    isolation: ['responsive'],
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
+    require('tailwind-scrollbar-hide'),
+    require('tailwindcss-blend-mode')
   ],
 };
