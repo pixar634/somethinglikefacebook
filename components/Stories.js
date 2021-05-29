@@ -37,7 +37,7 @@ function Stories() {
     ];
 
     return (
-        <div className="flex flex-nowrap justify-centre space-x-3 lg:mx-auto  overflow-x-auto scrollbar-hide">
+        <div className="flex justify-center sm:space-x-3 lg:mx-auto  overflow-x-auto scrollbar-hide" >
             {/* <h1>testing</h1> */}
             {stories.map((story) => (
                 <StoryCard
@@ -46,7 +46,7 @@ function Stories() {
             )
             )}
 
-        </div>
+        </ div>
     )
 }
 
