@@ -4,6 +4,7 @@ import Header from "../components/Header"
 import Login from '../components/Login'
 import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
+import Widgets from "../components/Widgets";
 //pass session here to see if the user is logegd in/if not, then render login component.
 export default function Home({ session }) {
   if (!session) return <Login />
@@ -17,12 +18,13 @@ export default function Home({ session }) {
       {/* Header */}
       <Header />
 
-      <main className="flex">
+      <main className="flex bg-gray-800 font-barlow">
         {/* sidebar */}
         <Sidebar />
         {/* Feed */}
         <Feed />
         {/* rightside chat */}
+        <Widgets />
       </main>
 
     </div>

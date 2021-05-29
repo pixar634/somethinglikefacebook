@@ -21,7 +21,7 @@ import { signOut, useSession } from "next-auth/client"
 function Header() {
     const [session] = useSession();
     return (
-        <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
+        <div className="sticky font-barlow top-0 z-50 bg-gray-800 flex items-center p-2 lg:px-5  text-white ">
             {/* left */}
             <div className="flex items-center">
                 <Image
@@ -30,10 +30,10 @@ function Header() {
                     height="40"
                     layout="fixed"
                 />
-                <div className="hidden md:inline-flex ml-2 items-center rounded-full bg-gray-100 p-2">
-                    <SearchIcon className="h-6 text-gray-600" />
+                <div className="hidden md:inline-flex ml-2 items-center rounded-full bg-gray-600 p-2 hover:b-2 hover:border-blue-400" >
+                    <SearchIcon className="h-6 text-gray-300" />
                     <input
-                        className="hidden lg:inline-flex ml-2 bg-transparent outline-none placeholder-gray-500 flex-shrink"
+                        className="hidden lg:inline-flex ml-2 bg-transparent outline-none placeholder-gray-300 flex-shrink "
                         placeholder="Search Facebook"
                     />
                 </div>

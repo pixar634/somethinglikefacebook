@@ -62,7 +62,7 @@ function InputBox() {
     }
 
     return (
-        <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
+        <div className="bg-gray-700 p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
             <div className="flex space-x-4 p-4 items-centre">
                 <Image
                     className="rounded-full"
@@ -72,7 +72,7 @@ function InputBox() {
                     layout="fixed"
                 />
                 <form className="flex flex-1">
-                    <input type="text" className="rounded-full h-12 bg-gray-100 flex-grow px-5 focus:outline-none" placeholder={`Whats on your mind,${session.user.name}?`}
+                    <input type="text" className="rounded-full h-12 bg-gray-600 text-white flex-grow px-5 focus:outline-none" placeholder={`Whats on your mind,${session.user.name}?`}
                         ref={inputRef}
                     />
                     <button hidden type='submit' onClick={sendPost}>Submit</button>
@@ -89,17 +89,17 @@ function InputBox() {
             <div className='flex justify-evenly p-3 border-t'>
                 <div className='inputIcon'>
                     <VideoCameraIcon className="h-7 text-red-500" />
-                    <p className="text-xs sm:text-sm xl:text-base">Live Video</p>
+                    <p className="text-xs sm:text-sm xl:text-base hidden sm:inline-flex">Live Video</p>
 
                 </div>
                 <div onClick={() => filePickerRef.current.click()} className='inputIcon'>
                     <CameraIcon className="h-7 text-green-400" />
-                    <p className="text-xs sm:text-sm xl:text-base">Photo/Video</p>
+                    <p className="text-xs sm:text-sm xl:text-base hidden sm:inline-flex">Photo/Video</p>
                     <input ref={filePickerRef} onChange={addImagetoPost} type="file" hidden />
                 </div>
                 <div className='inputIcon'>
                     <EmojiHappyIcon className="h-7 text-yellow-300" />
-                    <p className="text-xs sm:text-sm xl:text-base">Feeling/Activity</p>
+                    <p className="text-xs sm:text-sm xl:text-base hidden sm:inline-flex">Feeling/Activity</p>
                 </div>
             </div>
         </div>

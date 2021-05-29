@@ -1,12 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins&display=swap');
 @layer components { 
   .icon{
     @apply hidden xl:inline-flex p-2 w-10;
   }
   .inputIcon{
-    @apply flex items-center space-x-1 hover:bg-gray-100 flex-grow justify-center p-2 rounded-xl cursor-pointer;
+    @apply flex items-center space-x-1 hover:bg-gray-600 hover:rounded-xl flex-grow justify-center p-2 rounded-xl cursor-pointer;
   }
 }

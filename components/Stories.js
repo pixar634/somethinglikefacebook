@@ -14,8 +14,8 @@ function Stories() {
         },
         {
             name: "Elon Musk",
-            src: "https://links.papareact.com/4zn",
-            profile: "https://links.papareact.com/kxk",
+            src: "https://links.papareact.com/d0c",
+            profile: "https://links.papareact.com/d0c",
         },
         {
             name: "Jeff Bezoz",
@@ -32,15 +32,12 @@ function Stories() {
             src: "https://links.papareact.com/4u4",
             profile: "https://links.papareact.com/zvy",
         },
-        {
-            name: "Bill Gates",
-            src: "https://links.papareact.com/4u4",
-            profile: "https://links.papareact.com/zvy",
-        },
+
+
     ];
 
     return (
-        <div className="flex justify-centre space-x-3 mx-auto">
+        <div className="flex flex-nowrap justify-centre space-x-3 lg:mx-auto  overflow-x-auto scrollbar-hide">
             {/* <h1>testing</h1> */}
             {stories.map((story) => (
                 <StoryCard
