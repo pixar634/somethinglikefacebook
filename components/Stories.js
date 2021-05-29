@@ -33,11 +33,10 @@ function Stories() {
             profile: "https://links.papareact.com/zvy",
         },
 
-
     ];
 
     return (
-        <div className="flex justify-center sm:space-x-3 lg:mx-auto  overflow-x-auto scrollbar-hide" >
+        <div className="flex mx-auto justify-center sm:space-x-3 lg:mx-auto  overflow-x-auto scrollbar-hide" >
             {/* <h1>testing</h1> */}
             {stories.map((story) => (
                 <StoryCard

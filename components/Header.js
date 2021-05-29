@@ -37,7 +37,7 @@ function Header() {
                     <SearchIcon className="h-6 text-gray-300" />
                     <input
                         className="hidden lg:inline-flex ml-2 bg-transparent   outline-none placeholder-gray-300 flex-shrink"
-                        placeholder="Search Facebook"
+                        placeholder="Search GlobeConnect"
                     />
                 </div>
             </div>
