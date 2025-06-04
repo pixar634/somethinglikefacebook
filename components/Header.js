@@ -17,7 +17,6 @@ import {
 } from "@heroicons/react/outline"
 import HeaderIcon from './HeaderIcon'
 import { signOut, useSession } from "next-auth/client"
-import Logo from "../assets/logo30.png"
 function Header() {
     const [session] = useSession();
     return (
@@ -30,7 +29,7 @@ function Header() {
                     height="40"
                     layout="fixed"
                 /> */}
-                <img src={Logo} className="h-10  transition duration-500 transform-gpu ease-in lg:rotate-180 md:rotate-90 " />
+                <img src="https://links.papareact.com/t4i" className="h-10  transition duration-500 transform-gpu ease-in lg:rotate-180 md:rotate-90" alt="Logo" />
 
 
                 <div className="hidden md:inline-flex ml-2 items-center rounded-full bg-gray-600 p-2 hover:b-2 hover:border-blue-400" >
