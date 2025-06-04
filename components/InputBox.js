@@ -1,11 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import { useSession } from "next-auth/client"
+import { useSession } from "next-auth/react"
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import { useRef, useState } from "react";
 import { db, storage } from "../firebase"
-import firebase from 'firebase'
+import { serverTimestamp } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
+import { ref, uploadString, getDownloadURL } from "firebase/storage";
+import { addDoc, collection } from "firebase/firestore";
 
 function InputBox() {
 
@@ -18,29 +21,21 @@ function InputBox() {
         //prevent users to submit vithout any value in input field
         if (!inputRef.current.value) return;
         // alert(inputRef.current.value);
-        db.collection('posts').add({
+        addDoc(collection(db, "posts"), {
             message: inputRef.current.value,
             name: session.user.name,
             email: session.user.email,
             image: session.user.image,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            timestamp: serverTimestamp(),
         }).then(doc => {
             if (imageToPost) {
-                const uploadtask = storage.ref(`posts/${doc.id}`).putString(imageToPost, 'data_url')
-                removeImage();
-                uploadtask.on(
-                    'state_change',
-                    null,
-                    error => console.error(error),
-                    () => {
-                        // when the upload completes
-                        storage.ref('posts').child(doc.id).getDownloadURL().then(url => {
-                            db.collection('posts').doc(doc.id).set({
-                                postImage: url
-                            }, { merge: true })
-                        })
-                    }
-                )
+                (async () => {
+                    const storageRef = ref(storage, `posts/${doc.id}`);
+                    await uploadString(storageRef, imageToPost, 'data_url');
+                    removeImage();
+                    const url = await getDownloadURL(storageRef);
+                    await setDoc(doc(db, 'posts', doc.id), { postImage: url }, { merge: true });
+                })();
             }
         })
 

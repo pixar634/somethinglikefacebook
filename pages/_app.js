@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { Provider } from "next-auth/client"
+import { Provider } from "next-auth/react"
 function MyApp({ Component, pageProps }) {
   return (
     /* provider here is actually used as context api approach, to share among components,inbuilt nextjs capabilities: 
@@ -14,3 +14,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+

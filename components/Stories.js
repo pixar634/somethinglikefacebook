@@ -1,6 +1,6 @@
 import React from 'react'
 import StoryCard from './StoryCard'
-import { useSession } from "next-auth/client"
+import { useSession } from "next-auth/react"
 
 
 

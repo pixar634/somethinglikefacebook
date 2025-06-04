@@ -1,11 +1,12 @@
 import React from 'react'
 import { useCollection } from "react-firebase-hooks/firestore";
+import { collection, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase"
 import Post from "./Post"
 function Posts({ posts }) {
 
     const [realtimePosts, loading, error] = useCollection(
-        db.collection('posts').orderBy('timestamp', 'desc')
+        query(collection(db, "posts"), orderBy("timestamp", "desc"))
     )
     // console.log(realtimePosts.docs)
 

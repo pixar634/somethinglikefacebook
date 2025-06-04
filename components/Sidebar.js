@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/react'
 import SidebarRow from './SidebarRow'
 import {
     ChevronDownIcon,
@@ -30,3 +30,4 @@ function Sidebar() {
 
 
 export default Sidebar
+

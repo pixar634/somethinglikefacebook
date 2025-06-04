@@ -16,8 +16,8 @@ import {
     ShoppingCartIcon
 } from "@heroicons/react/outline"
 import HeaderIcon from './HeaderIcon'
-import { signOut, useSession } from "next-auth/client"
-import Logo from "../assets/logo30.png"
+import { signOut, useSession } from "next-auth/react"
+const Logo="https://links.papareact.com/5me"
 function Header() {
     const [session] = useSession();
     return (
@@ -83,3 +83,4 @@ function Header() {
 }
 
 export default Header
+
