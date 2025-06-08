@@ -24,12 +24,6 @@ function Header() {
         <div className="sticky font-barlow top-0 z-50 bg-gray-800 flex items-center p-2 lg:px-5  text-white ">
             {/* left */}
             <div className="flex items-center ">
-                {/* <Image className="bg-blend-darken h-20"
-                    src="../assets/logo1.png"
-                    width="40"
-                    height="40"
-                    layout="fixed"
-                /> */}
                 <img src={Logo} className="h-10  transition duration-500 transform-gpu ease-in lg:rotate-180 md:rotate-90 " />
 
 
